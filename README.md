@@ -16,6 +16,12 @@ docker-compose up --build
 cd web
 npm install
 npm run watch
+php bin/console doctrine:migrations:migrate
+```
+go to cli in your docker dasboard: 
+```shell
+cd web
+php bin/console doctrine:migrations:migrate
 ```
 
 - Symfony 6 will run on [http://localhost:8507](http://localhost:8507)
