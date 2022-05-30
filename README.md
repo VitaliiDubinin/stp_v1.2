@@ -15,6 +15,7 @@ cp .env.example .env && cp web/.env.example web/.env
 docker-compose up --build
 cd web
 npm install
+npm run watch
 ```
 
 - Symfony 6 will run on [http://localhost:8507](http://localhost:8507)
