@@ -1,17 +1,16 @@
-# Symfony-MAMP
+# Farmers App
 
-Symfony-MAMP is a set of docker images that include Starter-Kit for a MAMP stack ([Symfony6](https://symfony.com/), [macOS](https://www.apple.com/macos/monterey/), [Apache](https://www.apache.org/), [MySQL](https://www.mysql.com/), [PHP8](https://www.php.net/) and [phpMyAdmin](https://www.phpmyadmin.net/)) all in one handy package.
+This app is the result of the final project for React22K course, team Kernel.
 
----
+This app was a Nahomzoe's (@ github) idea.
+scrum mastered by VitaliiDubini (@ github)
 
 ## Using the image
 
-## Installation
+### Installation
 
 ```shell
-git clone Symfony-MAMP
-cd Symfony-MAMP
-cp .env.example .env && cp web/.env.example web/.env
+git clone https://github.com/VitaliiDubinin/STP_Kernel.git
 docker-compose up --build
 cd web
 npm install
@@ -24,7 +23,7 @@ cd web
 php bin/console doctrine:migrations:migrate
 ```
 
-- Symfony 6 will run on [http://localhost:8507](http://localhost:8507)
+- npm watch will run on [http://localhost:8507](http://localhost:8507)
 - phpMyAdmin will run on [http://localhost:9582](http://localhost:9582)
 
 # Use for reference
