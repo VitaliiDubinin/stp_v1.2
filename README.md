@@ -15,8 +15,8 @@ cp .env.example .env && cp web/.env.example web/.env
 docker-compose up --build
 ```
 
-- Symfony 6 will run on [http://localhost:8007](http://localhost:8507)
-- phpMyAdmin will run on [http://localhost:9082](http://localhost:9582)
+- Symfony 6 will run on [http://localhost:8507](http://localhost:8507)
+- phpMyAdmin will run on [http://localhost:9582](http://localhost:9582)
 
 # Use for reference
 
