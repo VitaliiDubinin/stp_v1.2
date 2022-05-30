@@ -1,0 +1,32 @@
+# Misc.
+#ssl
+#.idea
+#nbproject
+#public/uploads/*
+#!public/uploads/.gitkeep
+#*.pem
+.DS_Store
+#.gitignore
+
+**/farmers/
+
+# env.
+#.env
+
+###> symfony/framework-bundle ###
+#/.env.local
+#/.env.local.php
+#/.env.*.local
+#/config/secrets/prod/prod.decrypt.private.php
+#/public/bundles/
+#/public/build/
+#/var/
+#/vendor/
+###< symfony/framework-bundle ###
+
+###> symfony/webpack-encore-bundle ###
+/node_modules/
+/public/build/
+#npm-debug.log
+#yarn-error.log
+###< symfony/webpack-encore-bundle ###

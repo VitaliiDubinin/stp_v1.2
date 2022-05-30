@@ -1,0 +1,122 @@
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].oneOf[1].use[1]!./assets/styles/app.css ***!
+  \**************************************************************************************************************/
+* {
+  margin: 0;
+}
+
+.App {
+  background-color: rgb(244, 244, 249);
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.footerContainer {
+  background-color: rgb(238, 223, 148);
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+}
+
+.mainContainer {
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navContainer {
+  background-color: rgb(238, 223, 148);
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  width: 4vh;
+  height: 4vh;
+  background-color: black;
+  border-radius: 50%;
+  margin-left: 5vh;
+}
+
+.navPanel ul {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50vw;
+}
+
+.navPanel a {
+  color: rgb(7, 7, 7);
+  text-decoration: none;
+}
+
+.pageContainer {
+  height: min-content;
+}
+
+.browser {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.productCard {
+  width: 200px;
+  height: 250px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.productImage {
+  height: 110px;
+  width: 170px;
+  background-color: black;
+  border-radius: 20px;
+  transform: skew(-20deg);
+}
+.productBodyContainer {
+  height: 110px;
+  width: 130px;
+}
+.productName {
+  color: rgb(6, 6, 6);
+}
+.productDescription {
+  font-size: 12px;
+}
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+}
+.seeMore {
+  font-size: 10px;
+  color: blue;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+.addToCartBtn {
+  background-color: rgb(238, 223, 148);
+  border: none;
+}
+.ProductPrice {
+  color: crimson;
+}
+
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYXBwLmNzcyIsIm1hcHBpbmdzIjoiOzs7QUFBQTtFQUNFLFNBQVM7QUFDWDs7QUFFQTtFQUNFLG9DQUFvQztFQUNwQyxZQUFZO0VBQ1osYUFBYTtFQUNiLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLG9DQUFvQztFQUNwQyxXQUFXO0VBQ1gsYUFBYTtFQUNiLG1CQUFtQjtFQUNuQix1QkFBdUI7RUFDdkIsa0JBQWtCO0VBQ2xCLFNBQVM7QUFDWDs7QUFFQTtFQUNFLG9DQUFvQztFQUNwQyxZQUFZO0VBQ1osYUFBYTtFQUNiLGFBQWE7RUFDYixzQkFBc0I7RUFDdEIsOEJBQThCO0FBQ2hDOztBQUVBO0VBQ0Usb0NBQW9DO0VBQ3BDLFdBQVc7RUFDWCxhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLDhCQUE4QjtBQUNoQzs7QUFFQTtFQUNFLFVBQVU7RUFDVixXQUFXO0VBQ1gsdUJBQXVCO0VBQ3ZCLGtCQUFrQjtFQUNsQixnQkFBZ0I7QUFDbEI7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsNkJBQTZCO0VBQzdCLFdBQVc7QUFDYjs7QUFFQTtFQUNFLG1CQUFtQjtFQUNuQixxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsZUFBZTtFQUNmLDJCQUEyQjtFQUMzQixtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxZQUFZO0VBQ1osYUFBYTtFQUNiLFlBQVk7RUFDWixhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCO0FBQ0E7RUFDRSxhQUFhO0VBQ2IsWUFBWTtFQUNaLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsdUJBQXVCO0FBQ3pCO0FBQ0E7RUFDRSxhQUFhO0VBQ2IsWUFBWTtBQUNkO0FBQ0E7RUFDRSxtQkFBbUI7QUFDckI7QUFDQTtFQUNFLGVBQWU7QUFDakI7QUFDQTtFQUNFLGFBQWE7RUFDYiw4QkFBOEI7QUFDaEM7QUFDQTtFQUNFLGVBQWU7RUFDZixXQUFXO0FBQ2I7O0FBRUE7RUFDRSxXQUFXO0VBQ1gscUJBQXFCO0FBQ3ZCOztBQUVBO0VBQ0Usb0NBQW9DO0VBQ3BDLFlBQVk7QUFDZDtBQUNBO0VBQ0UsY0FBYztBQUNoQiIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2Fzc2V0cy9zdHlsZXMvYXBwLmNzcyJdLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcbiAgbWFyZ2luOiAwO1xufVxuXG4uQXBwIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDI0NCwgMjQ0LCAyNDkpO1xuICB3aWR0aDogMTAwdnc7XG4gIGhlaWdodDogMTAwdmg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuLmZvb3RlckNvbnRhaW5lciB7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigyMzgsIDIyMywgMTQ4KTtcbiAgaGVpZ2h0OiA1dmg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIGJvdHRvbTogMDtcbn1cblxuLm1haW5Db250YWluZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjU1LCAyNTUsIDI1NSk7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuXG4ubmF2Q29udGFpbmVyIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIzOCwgMjIzLCAxNDgpO1xuICBoZWlnaHQ6IDV2aDtcbiAgZGlzcGxheTogZmxleDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuXG4ubG9nb0NvbnRhaW5lciB7XG4gIHdpZHRoOiA0dmg7XG4gIGhlaWdodDogNHZoO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiBibGFjaztcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xuICBtYXJnaW4tbGVmdDogNXZoO1xufVxuXG4ubmF2UGFuZWwgdWwge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWV2ZW5seTtcbiAgd2lkdGg6IDUwdnc7XG59XG5cbi5uYXZQYW5lbCBhIHtcbiAgY29sb3I6IHJnYig3LCA3LCA3KTtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuXG4ucGFnZUNvbnRhaW5lciB7XG4gIGhlaWdodDogbWluLWNvbnRlbnQ7XG59XG5cbi5icm93c2VyIHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC13cmFwOiB3cmFwO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQ7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5wcm9kdWN0Q2FyZCB7XG4gIHdpZHRoOiAyMDBweDtcbiAgaGVpZ2h0OiAyNTBweDtcbiAgbWFyZ2luOiAyMHB4O1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuLnByb2R1Y3RJbWFnZSB7XG4gIGhlaWdodDogMTEwcHg7XG4gIHdpZHRoOiAxNzBweDtcbiAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gIGJvcmRlci1yYWRpdXM6IDIwcHg7XG4gIHRyYW5zZm9ybTogc2tldygtMjBkZWcpO1xufVxuLnByb2R1Y3RCb2R5Q29udGFpbmVyIHtcbiAgaGVpZ2h0OiAxMTBweDtcbiAgd2lkdGg6IDEzMHB4O1xufVxuLnByb2R1Y3ROYW1lIHtcbiAgY29sb3I6IHJnYig2LCA2LCA2KTtcbn1cbi5wcm9kdWN0RGVzY3JpcHRpb24ge1xuICBmb250LXNpemU6IDEycHg7XG59XG4uY2FyZEZvb3RlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2Vlbjtcbn1cbi5zZWVNb3JlIHtcbiAgZm9udC1zaXplOiAxMHB4O1xuICBjb2xvcjogYmx1ZTtcbn1cblxuYSB7XG4gIGNvbG9yOiBibHVlO1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG59XG5cbi5hZGRUb0NhcnRCdG4ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMjM4LCAyMjMsIDE0OCk7XG4gIGJvcmRlcjogbm9uZTtcbn1cbi5Qcm9kdWN0UHJpY2Uge1xuICBjb2xvcjogY3JpbXNvbjtcbn1cbiJdLCJuYW1lcyI6W10sInNvdXJjZVJvb3QiOiIifQ==*/
