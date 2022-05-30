@@ -13,6 +13,8 @@ git clone Symfony-MAMP
 cd Symfony-MAMP
 cp .env.example .env && cp web/.env.example web/.env
 docker-compose up --build
+cd web
+npm install
 ```
 
 - Symfony 6 will run on [http://localhost:8507](http://localhost:8507)
