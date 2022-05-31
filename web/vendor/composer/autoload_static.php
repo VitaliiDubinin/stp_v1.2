@@ -391,9 +391,11 @@ class ComposerStaticInitaf31b9d9c4ee48900259ee2fa756301a
     public static $classMap = array (
         'App\\Controller\\ReceipeController' => __DIR__ . '/../..' . '/src/Controller/ReceipeController.php',
         'App\\Controller\\SpaController' => __DIR__ . '/../..' . '/src/Controller/SpaController.php',
+        'App\\Entity\\LoginUser' => __DIR__ . '/../..' . '/src/Entity/LoginUser.php',
         'App\\Entity\\Product' => __DIR__ . '/../..' . '/src/Entity/Product.php',
         'App\\Entity\\Recipe' => __DIR__ . '/../..' . '/src/Entity/Recipe.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
+        'App\\Repository\\LoginUserRepository' => __DIR__ . '/../..' . '/src/Repository/LoginUserRepository.php',
         'App\\Repository\\ProductRepository' => __DIR__ . '/../..' . '/src/Repository/ProductRepository.php',
         'App\\Repository\\RecipeRepository' => __DIR__ . '/../..' . '/src/Repository/RecipeRepository.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
