@@ -8,11 +8,9 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Controller\\ReceipeController' => $baseDir . '/src/Controller/ReceipeController.php',
     'App\\Controller\\SpaController' => $baseDir . '/src/Controller/SpaController.php',
-    'App\\Entity\\LoginUser' => $baseDir . '/src/Entity/LoginUser.php',
     'App\\Entity\\Product' => $baseDir . '/src/Entity/Product.php',
     'App\\Entity\\Recipe' => $baseDir . '/src/Entity/Recipe.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
-    'App\\Repository\\LoginUserRepository' => $baseDir . '/src/Repository/LoginUserRepository.php',
     'App\\Repository\\ProductRepository' => $baseDir . '/src/Repository/ProductRepository.php',
     'App\\Repository\\RecipeRepository' => $baseDir . '/src/Repository/RecipeRepository.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
