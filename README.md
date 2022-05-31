@@ -27,4 +27,4 @@ php bin/console doctrine:migrations:migrate
 
 # Use for reference
 
-Use solely for reference material only
+Use solely for reference material only. yes!
