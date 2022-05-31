@@ -15,7 +15,6 @@ docker-compose up --build
 cd web
 npm install
 npm run watch
-php bin/console doctrine:migrations:migrate
 ```
 go to cli in your docker dasboard: 
 ```shell
