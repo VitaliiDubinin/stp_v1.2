@@ -33,3 +33,9 @@ yarn-error.log
 web/vendor/
 web/var/
 web/node_modules/
+web/public/build/app.js
+web/var/cache/dev/App_KernelDevDebugContainer.php
+web/var/cache/dev/App_KernelDevDebugContainer.preload.php
+ web/var/cache/dev/App_KernelDevDebugContainerCompiler.log
+ web/var/cache/dev/annotations.php
+ web/vendor/composer/installed.php
