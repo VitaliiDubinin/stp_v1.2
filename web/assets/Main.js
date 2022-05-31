@@ -10,6 +10,8 @@ import Profile from "../assets/pages/Profile";
 import Cart from "../assets/pages/Cart";
 import CheckOut from "../assets/pages/CheckOut";
 import Footer from "../assets/components/ui_components/Footer";
+import LogIn from "./pages/LogIn";
+import SignUp from "./pages/SignUp";
 
 function Main() {
   return (
@@ -31,6 +33,8 @@ function Main() {
         <Route path="/cart/checkout" element={<CheckOut />}>
           {" "}
         </Route>
+        <Route path="/login" element={<LogIn/>}></Route>
+        <Route path="/login/signup" element={<SignUp/>}></Route>
       </Routes>
       <Footer />
     </Router>
