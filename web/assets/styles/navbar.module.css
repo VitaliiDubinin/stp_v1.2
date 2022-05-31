@@ -1,4 +1,4 @@
-/*.navContainer{
+.navContainer{
     background-color: rgb(238, 223, 148);
     height: 5vh;
     display: flex;
@@ -23,4 +23,4 @@
 .navPanel a{
     color: rgb(7, 7, 7);
     text-decoration: none;
-}*/
+}
