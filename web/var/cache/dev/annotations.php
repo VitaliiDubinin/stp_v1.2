@@ -84,6 +84,10 @@ return [[
 '[C]App%5CEntity%5CLoginUser%23getRoles' => 1,
 'App%5CEntity%5CLoginUser%23setRoles' => 0,
 '[C]App%5CEntity%5CLoginUser%23setRoles' => 1,
+'App%5CEntity%5CLoginUser%23getPassword' => 0,
+'[C]App%5CEntity%5CLoginUser%23getPassword' => 1,
+'App%5CEntity%5CLoginUser%23setPassword' => 0,
+'[C]App%5CEntity%5CLoginUser%23setPassword' => 1,
 'App%5CEntity%5CLoginUser%23eraseCredentials' => 0,
 '[C]App%5CEntity%5CLoginUser%23eraseCredentials' => 1,
 'App%5CEntity%5CLoginUser%24id' => 0,
@@ -92,6 +96,8 @@ return [[
 '[C]App%5CEntity%5CLoginUser%24uuid' => 1,
 'App%5CEntity%5CLoginUser%24roles' => 0,
 '[C]App%5CEntity%5CLoginUser%24roles' => 1,
+'App%5CEntity%5CLoginUser%24password' => 0,
+'[C]App%5CEntity%5CLoginUser%24password' => 1,
 'App%5CEntity%5CProduct' => 0,
 '[C]App%5CEntity%5CProduct' => 1,
 'App%5CEntity%5CProduct%23getId' => 0,
@@ -630,6 +636,10 @@ return [[
 ], [
 
 0 => [],
+<<<<<<< HEAD
 1 => 1653993874,
+=======
+1 => 1653992585,
+>>>>>>> refs/remotes/origin/master
 
 ]];
