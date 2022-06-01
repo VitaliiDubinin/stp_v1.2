@@ -14,36 +14,66 @@ class Product
     private $id;
 
     #[ORM\Column(type: 'integer')]
-    private $productId;
+    private $user_id;
 
     #[ORM\Column(type: 'integer')]
-    private $quantity;
+    private $cart_id;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private $product_name;
+
+    #[ORM\Column(type: 'integer')]
+    private $price;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getProductId(): ?int
+    public function getUserId(): ?int
     {
-        return $this->productId;
+        return $this->user_id;
     }
 
-    public function setProductId(int $productId): self
+    public function setUserId(int $user_id): self
     {
-        $this->productId = $productId;
+        $this->user_id = $user_id;
 
         return $this;
     }
 
-    public function getQuantity(): ?int
+    public function getCartId(): ?int
     {
-        return $this->quantity;
+        return $this->cart_id;
     }
 
-    public function setQuantity(int $quantity): self
+    public function setCartId(int $cart_id): self
     {
-        $this->quantity = $quantity;
+        $this->cart_id = $cart_id;
+
+        return $this;
+    }
+
+    public function getProductName(): ?string
+    {
+        return $this->product_name;
+    }
+
+    public function setProductName(string $product_name): self
+    {
+        $this->product_name = $product_name;
+
+        return $this;
+    }
+
+    public function getPrice(): ?int
+    {
+        return $this->price;
+    }
+
+    public function setPrice(int $price): self
+    {
+        $this->price = $price;
 
         return $this;
     }
