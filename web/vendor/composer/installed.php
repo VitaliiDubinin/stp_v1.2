@@ -5,7 +5,11 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '3ce8dca72cabfb8bd7eef68b38f2de0957022253',
+<<<<<<< HEAD
+        'reference' => '673388ed25aa36d34a317ccf9255a23cfebe9447',
+=======
+        'reference' => 'b3537d34d15e16c0d4529a6c1e52c0aaad6e2ac7',
+>>>>>>> 48516713a06bb13ab296995fa2baf2dd94e18502
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +20,11 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '3ce8dca72cabfb8bd7eef68b38f2de0957022253',
+<<<<<<< HEAD
+            'reference' => '673388ed25aa36d34a317ccf9255a23cfebe9447',
+=======
+            'reference' => 'b3537d34d15e16c0d4529a6c1e52c0aaad6e2ac7',
+>>>>>>> 48516713a06bb13ab296995fa2baf2dd94e18502
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -445,6 +453,15 @@
             'reference' => 'e3f9a1d9e0f4968f68454403e820dffc7db38a59',
             'dev_requirement' => true,
         ),
+        'symfony/password-hasher' => array(
+            'pretty_version' => 'v6.0.8',
+            'version' => '6.0.8.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/password-hasher',
+            'aliases' => array(),
+            'reference' => 'b51d2155aafd5b03af0391e9e602538f6dc44f15',
+            'dev_requirement' => false,
+        ),
         'symfony/polyfill-ctype' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -517,6 +534,24 @@
             'reference' => '5de4ba2d41b15f9bd0e19b2ab9674135813ec98f',
             'dev_requirement' => false,
         ),
+        'symfony/property-access' => array(
+            'pretty_version' => 'v6.0.8',
+            'version' => '6.0.8.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/property-access',
+            'aliases' => array(),
+            'reference' => 'e5ac708a97933e9680b81b92eb90a5e301490d72',
+            'dev_requirement' => false,
+        ),
+        'symfony/property-info' => array(
+            'pretty_version' => 'v6.0.9',
+            'version' => '6.0.9.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/property-info',
+            'aliases' => array(),
+            'reference' => 'f6ca518cee8cac7e1e1a3f922a5731ab866b9b0b',
+            'dev_requirement' => false,
+        ),
         'symfony/proxy-manager-bridge' => array(
             'pretty_version' => 'v6.0.3',
             'version' => '6.0.3.0',
@@ -542,6 +577,42 @@
             'install_path' => __DIR__ . '/../symfony/runtime',
             'aliases' => array(),
             'reference' => '3b1ee78e883101439eb6c033feb43a5eea7fe190',
+            'dev_requirement' => false,
+        ),
+        'symfony/security-bundle' => array(
+            'pretty_version' => 'v6.0.9',
+            'version' => '6.0.9.0',
+            'type' => 'symfony-bundle',
+            'install_path' => __DIR__ . '/../symfony/security-bundle',
+            'aliases' => array(),
+            'reference' => '3910a5719d8a72634fef69699edcaf07aebe403c',
+            'dev_requirement' => false,
+        ),
+        'symfony/security-core' => array(
+            'pretty_version' => 'v6.0.8',
+            'version' => '6.0.8.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/security-core',
+            'aliases' => array(),
+            'reference' => '36d56362f990e3327130af868a9bed608c6e08f9',
+            'dev_requirement' => false,
+        ),
+        'symfony/security-csrf' => array(
+            'pretty_version' => 'v6.0.9',
+            'version' => '6.0.9.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/security-csrf',
+            'aliases' => array(),
+            'reference' => '5a48bfb3ba3a4e139d8184ca1005c00d8b8e4dc0',
+            'dev_requirement' => false,
+        ),
+        'symfony/security-http' => array(
+            'pretty_version' => 'v6.0.9',
+            'version' => '6.0.9.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/security-http',
+            'aliases' => array(),
+            'reference' => '94c5f8da5ad5b823b2777926c093b56ae576f5fb',
             'dev_requirement' => false,
         ),
         'symfony/service-contracts' => array(
