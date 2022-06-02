@@ -6,19 +6,11 @@ public/uploads/*
 !public/uploads/.gitkeep
 *.pem
 .DS_Store
-<<<<<<< HEAD
-.gitignore
-
-**/farmers/
-
-env.
-=======
 "gitignore
 
 **/farmers/
 
  env.
->>>>>>> d7bf6016a4e91abdc0ee7aad035604e4773300c1
 .env
 
 ###> symfony/framework-bundle ###
@@ -28,13 +20,8 @@ env.
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
 /public/build/
-<<<<<<< HEAD
-/var/
-/vendor/
-=======
 **/var/
 **/vendor/
->>>>>>> d7bf6016a4e91abdc0ee7aad035604e4773300c1
 ###< symfony/framework-bundle ###
 
 ###> symfony/webpack-encore-bundle ###

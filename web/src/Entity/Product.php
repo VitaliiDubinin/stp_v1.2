@@ -22,7 +22,7 @@ class Product
     #[ORM\Column(type: 'string', length: 255)]
     private $product_name;
 
-    #[ORM\Column(type: 'integer')]
+    #[ORM\Column(type: 'float')]
     private $price;
 
     public function getId(): ?int

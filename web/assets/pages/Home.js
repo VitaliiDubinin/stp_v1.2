@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 // import css from "../styles/pages.module.css";
+import Navbar from "../components/ui_components/Navbar";
 
 import ProductCard from "../components/ui_components/ProductCard";
 
@@ -14,7 +15,8 @@ function Home() {
       {
         productName: "RICE",
         shortDescription: "a very good rice",
-        description: "this product was seeded and farmed in the local farms of helsinki, the minimun tu buy is 1kg",
+        description:
+          "this product was seeded and farmed in the local farms of helsinki, the minimun tu buy is 1kg",
         totalAmount: 100,
         units: "kg",
         productPrice: 1.55,
@@ -24,7 +26,8 @@ function Home() {
       {
         productName: "potatoes",
         shortDescription: "this potatos are the best",
-        description: "try my potatoes and you will fall inlove for first time with a potato",
+        description:
+          "try my potatoes and you will fall inlove for first time with a potato",
         totalAmount: 20,
         units: "kg",
         productPrice: 2.25,
@@ -34,7 +37,8 @@ function Home() {
       {
         productName: "zuccini",
         shortDescription: "the perfect size of a zuccini",
-        description: "combine this zuccini with vaseline, condom and a bottle of wine then find out what climax is",
+        description:
+          "combine this zuccini with vaseline, condom and a bottle of wine then find out what climax is",
         totalAmount: 10,
         units: "unit",
         productPrice: 0.99,
@@ -44,7 +48,8 @@ function Home() {
       {
         productName: "carrots",
         shortDescription: "very good for eyes health",
-        description: "Have you ever seen a bunny with glasses?! if you are not a doctor or a biologist dont comment",
+        description:
+          "Have you ever seen a bunny with glasses?! if you are not a doctor or a biologist dont comment",
         totalAmount: 200,
         units: "bunch",
         productPrice: 5.99,
@@ -64,7 +69,8 @@ function Home() {
       {
         productName: "tomatoes",
         shortDescription: "in red and yellow",
-        description: "a salad witout tomatoes is like a a battle cruise armada ship without serial number",
+        description:
+          "a salad witout tomatoes is like a a battle cruise armada ship without serial number",
         totalAmount: 50,
         units: "pound",
         productPrice: 0.65,
@@ -74,7 +80,8 @@ function Home() {
       {
         productName: "eggplant",
         shortDescription: "funny name but tasty veggy",
-        description: "make the best jokes about eggplants with this beauties of vegetables",
+        description:
+          "make the best jokes about eggplants with this beauties of vegetables",
         totalAmount: 20,
         units: "unit",
         productPrice: 2,
@@ -94,7 +101,8 @@ function Home() {
       {
         productName: "cucumber",
         shortDescription: "the perfect size of a cucumber",
-        description: "combine this cucumber with vaseline, condom and a bottle of wine then find out what climax is",
+        description:
+          "combine this cucumber with vaseline, condom and a bottle of wine then find out what climax is",
         totalAmount: 10,
         units: "unit",
         productPrice: 10.99,
@@ -164,7 +172,8 @@ function Home() {
       {
         productName: "brussel sprows",
         shortDescription: "terrible taste but very healthy",
-        description: "Trivia: did you know that brussels sprows are not from brussels",
+        description:
+          "Trivia: did you know that brussels sprows are not from brussels",
         totalAmount: 10,
         units: "kg",
         productPrice: 10.99,
@@ -184,7 +193,8 @@ function Home() {
       {
         productName: "spinach",
         shortDescription: "popeye food",
-        description: "if you want to rescue your lady from brutus you gotta eat this",
+        description:
+          "if you want to rescue your lady from brutus you gotta eat this",
         totalAmount: 10,
         units: "g",
         productPrice: 10.99,
@@ -194,7 +204,8 @@ function Home() {
       {
         productName: "garlic",
         shortDescription: "ideal vs vampires",
-        description: "its known that vampires dont eat garlic cause the bad breath it leaves after",
+        description:
+          "its known that vampires dont eat garlic cause the bad breath it leaves after",
         totalAmount: 10,
         units: "g",
         productPrice: 1.99,
@@ -221,7 +232,8 @@ function Home() {
   return (
     // <div className={css.pageContainer}>
     <div className="pageContainer">
-      <h1>Home</h1>
+      <Navbar />
+      <h1 style={{ fontSize: "100" }}>Home</h1>
       <div>
         {/* <div className={css.search}> */}
         <div className="search">
