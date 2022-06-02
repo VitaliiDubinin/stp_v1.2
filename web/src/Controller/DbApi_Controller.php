@@ -7,20 +7,19 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DbApi_Controller extends AbstractController
-{
-       
-    #[Route('/api')] //{id<\d+>}
-    public function get_db($slug = null, $slug2=null):Response //database[1][0].id = 1, database[1][0].products = [1,2,3,4,5]
+{    
+    #[Route('/api{id<\d+>}')] //
+    public function get_db($slug = null):Response 
     {
        $database = [
-            "instruction" => [
 
-                "instruction" => "call api slash and the index of the object for individual display",
-                "example" => "api/x. where x is the desired index of item",
-            ],
-          
-             "users" => [
-                 [
+         [
+
+            "instruction" => "call api slash and the index of the object for individual display",
+            "example" => "api/x. where x is the desired index of item",
+        ],
+        [
+
                     "id" => 1,
                     "username" => "nahom",
                     "products" => [
@@ -234,21 +233,16 @@ class DbApi_Controller extends AbstractController
                    ]
                 ]
              ]
-                   ]
+
         ];
-    if (!$slug && !$slug2){
+    if (!$slug){
         return $this->json($database);
-    }
-    else if ($slug && !$slug2)
-    {
-        return $this->json($database[$slug]);
     }
     else 
     {
-
+        return $this->json($database[$slug]);
     }
 
-       
     }
 }
 
