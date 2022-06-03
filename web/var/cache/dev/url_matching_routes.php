@@ -8,6 +8,7 @@
 return [
     false, // $matchHost
     [ // $staticRoutes
+        '/api/products/all' => [[['_route' => 'api_mainget_all_products', '_controller' => 'App\\Controller\\ProductController::getAllProducts'], null, ['GET' => 0], null, false, false, null]],
         '/api/recipes/all' => [[['_route' => 'api_mainget_all_recipes', '_controller' => 'App\\Controller\\ReceipeController::getAllRecipe'], null, ['GET' => 0], null, false, false, null]],
         '/api/recipes/add' => [[['_route' => 'api_mainadd_new_recipe', '_controller' => 'App\\Controller\\ReceipeController::addRecipe'], null, ['POST' => 0], null, false, false, null]],
     ],

@@ -25,9 +25,7 @@ class ProductController extends AbstractController
                 'cart_id' => $product->getCartId(),
                 'product_name' => $product->getProductName(),
                 'price' => $product->getPrice(),
-                // 'instructions' => $recipe->getInstructions(),
-                // 'difficulty' => $recipe->getDifficulty(),
-                // 'ingredients' => $recipe->getIngredients(),
+
             );
         }
         return $this->json($response);

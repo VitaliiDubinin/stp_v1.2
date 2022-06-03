@@ -58,6 +58,10 @@ return [[
 '[C]App%5CController%5CDbApi_Controller' => 1,
 'App%5CController%5CDbApi_Controller%23get_db' => 0,
 '[C]App%5CController%5CDbApi_Controller%23get_db' => 1,
+'App%5CController%5CProductController' => 0,
+'[C]App%5CController%5CProductController' => 1,
+'App%5CController%5CProductController%23getAllProducts' => 0,
+'[C]App%5CController%5CProductController%23getAllProducts' => 1,
 'App%5CController%5CReceipeController' => 0,
 '[C]App%5CController%5CReceipeController' => 1,
 'App%5CController%5CReceipeController%23getAllRecipe' => 0,
@@ -688,6 +692,6 @@ return [[
 ], [
 
 0 => [],
-1 => 1654189274,
+1 => 1654250284,
 
 ]];
