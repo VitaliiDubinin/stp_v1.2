@@ -16,7 +16,7 @@ class ProductController extends AbstractController
     #[Route('/products/all', name: "get_all_products", methods: ['GET'])]
     public function getAllProducts(EntityManagerInterface $em)
     {
-        $products = $em->getRepository(Product2::class)->findAll();
+        $products = $em->getRepository(Product::class)->findAll();
         $response = [];
         foreach ($products as $product) {
             $response[] = array(

@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Product;
+use App\Entity\Product2;
 use Doctrine\ORM\EntityManagerInterface;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -10,9 +10,10 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/api', name: 'api_main')]
-class ProductController extends AbstractController
+#[Route('/api2', name: 'api_main')]
+class Product2Controller extends AbstractController
 {
+
     #[Route('/products/all', name: "get_all_products", methods: ['GET'])]
     public function getAllProducts(EntityManagerInterface $em)
     {
@@ -22,10 +23,12 @@ class ProductController extends AbstractController
             $response[] = array(
                 'id' => $product->getId(),
                 'user_id' => $product->getUserId(),
-                'cart_id' => $product->getCartId(),
                 'product_name' => $product->getProductName(),
                 'price' => $product->getPrice(),
-
+                'description' => $product->getDescription(),
+                'image' => $product->getImage(),
+                'quantity' => $product->getQuantity(),
+                'unit' => $product->getUnit(),
             );
         }
         return $this->json($response);
