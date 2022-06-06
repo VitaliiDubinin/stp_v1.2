@@ -10,26 +10,29 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/api2', name: 'api_main')]
+#[Route('/api2', name: 'api_main2')] //'/api2/products2/all2'
 class Product2Controller extends AbstractController
 {
 
-    #[Route('/products/all', name: "get_all_products", methods: ['GET'])]
+    #[Route('/products2/all2', name: "get_all_products", methods: ['GET'])]
     public function getAllProducts(EntityManagerInterface $em)
     {
         $products = $em->getRepository(Product2::class)->findAll();
+
         $response = [];
-        foreach ($products as $product) {
+        foreach ($products as $product2) {
             $response[] = array(
-                'id' => $product->getId(),
-                'user_id' => $product->getUserId(),
-                'product_name' => $product->getProductName(),
-                'price' => $product->getPrice(),
-                'description' => $product->getDescription(),
-                'image' => $product->getImage(),
-                'quantity' => $product->getQuantity(),
-                'unit' => $product->getUnit(),
+                'id' => $product2->getId(),
+                'user_id' => $product2->getUserId(),
+                'product_name' => $product2->getProductName(),
+                'price' => $product2->getPrice(),
+                'description' => $product2->getDescription(),
+                'image' => $product2->getImage(),
+                'quantity' => $product2->getQuantity(),
+                'unit' => $product2->getUnit(),
             );
+            //$em->persist($product2);
+            $em->flush();
         }
         return $this->json($response);
     }

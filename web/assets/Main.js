@@ -19,7 +19,8 @@ function Main() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
-        <Route path="/:productId" element={<SingleProduct />}></Route>
+        {/*<Route path="/:productId" element={<SingleProduct />}></Route>*/}
+        <Route path="/api/product/find/:id" element={<SingleProduct />} />
         <Route path="/profile" element={<Profile />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
         <Route path="/cart/checkout" element={<CheckOut />}></Route>

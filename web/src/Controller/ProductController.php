@@ -22,10 +22,12 @@ class ProductController extends AbstractController
             $response[] = array(
                 'id' => $product->getId(),
                 'user_id' => $product->getUserId(),
-                'cart_id' => $product->getCartId(),
                 'product_name' => $product->getProductName(),
                 'price' => $product->getPrice(),
-
+                'description' => $product->getDescription(),
+                'image' => $product->getImage(),
+                'quantity' => $product->getQuantity(),
+                'unit' => $product->getUnit(),
             );
         }
         return $this->json($response);
@@ -51,25 +53,27 @@ class ProductController extends AbstractController
     //     return new Response('Added a new recipe ' . $newRecipe->getId());
     // }
 
-    // #[Route('/recipes/find/{id}', name: "find_a_recipe", methods: ['GET'])]
-    // public function findRecipe(int $id, EntityManagerInterface $em)
-    // {
-    //     $recipe = $em->getRepository(Recipe::class)->find($id);
+    #[Route('/products/find/{id}', name: "find_a_product", methods: ['GET'])]
+    public function findProduct(int $id, EntityManagerInterface $em)
+    {
+        $product = $em->getRepository(Product::class)->find($id);
 
-    //     if (!$recipe) {
-    //         return $this->json('No recipe was found with the id of ' . $id, 404);
-    //     }
+        if (!$product) {
+            return $this->json('No product was found with the id of ' . $id, 404);
+        }
 
-    //     $data = [
-    //         'id' => $recipe->getId(),
-    //         'name' => $recipe->getName(),
-    //         'photo' => $recipe->getPhoto(),
-    //         'instructions' => $recipe->getInstructions(),
-    //         'difficulty' => $recipe->getDifficulty(),
-    //         'ingredients' => $recipe->getIngredients(),
-    //     ];
-    //     return $this->json($data);
-    // }
+        $data = [
+            'id' => $product->getId(),
+            'product_name' => $product->getProductName(),
+            'price' => $product->getPrice(),
+            'user_id' => $product->getUserId(),
+            'description' => $product->getDescription(),
+            'image' => $product->getImage(),
+            'quantity' => $product->getQuantity(),
+            'unit' => $product->getUnit(),
+        ];
+        return $this->json($data);
+    }
 
     // #[Route('/recipes/edit/{id}', name: "edit_a_recipe", methods: ['PUT', 'PATCH'])]
     // public function editRecipe(Request $request, int $id, ManagerRegistry $doctrine)

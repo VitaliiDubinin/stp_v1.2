@@ -4,12 +4,6 @@ INSERT INTO stp_user VALUES (3, 'vitali', 'vitali', 'dubinin', 'guess', 1);
 INSERT INTO stp_user VALUES (4, 'victor', 'victor', 'grinan', 'password', 1);
 
 
-/*eyoel products*/
-INSERT INTO product VALUES (null, 1, 100, 'punkin', 2);
-INSERT INTO product VALUES (null, 1, 2, 'eggplant', 2);
-INSERT INTO product VALUES (null, 1, 5.99, 'carrots', 2);
-INSERT INTO product VALUES (null, 1, 0.65, 'tomatoes', 2);
-INSERT INTO product VALUES (null, 1, 99.99, 'faba beans', 2);
 
 /*vitali products*/
 INSERT INTO product VALUES (null, 1, 10.99, 'cucumber', 3);
@@ -27,8 +21,7 @@ INSERT INTO product VALUES (null, 1, 10.99, 'spinach', 4);
 INSERT INTO product VALUES (null, 1, 1.99, 'garlic', 4);
 
 
-[
-
+/*[
       {
         productName: "cucumber",
         shortDescription: "the perfect size of a cucumber",
@@ -143,9 +136,8 @@ INSERT INTO product VALUES (null, 1, 1.99, 'garlic', 4);
         image: null,
         id: 19,
       },
-    ];
-
-
+  ];
+*/
 
 
 
