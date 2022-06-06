@@ -2,9 +2,7 @@ import React from "react";
 // import css from './producCard.module.css';
 import { Link } from "react-router-dom";
 
-
 function ProductCard({data, product_name, description, units, price, image = null }) {
-
 
   const pic = image ? image : "no image available";
 
