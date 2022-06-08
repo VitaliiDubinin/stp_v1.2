@@ -44,6 +44,6 @@ export default Main;
 const root = ReactDOM.createRoot(document.getElementById("app"));
 root.render(
   <React.StrictMode>
-    <Main />,
+    <Main />
   </React.StrictMode>
 );
