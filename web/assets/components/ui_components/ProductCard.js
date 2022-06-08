@@ -13,9 +13,11 @@ const count_words = (word_array) => {
   return total;
 }
 
-function ProductCard({ data, product_name, description, units, price, id, image = null }) {
+function ProductCard({ data, product_name, description, price, id, units=null, image = null }) {
   let randImage = randApiHead;
   
+  units = units ? units: 'kg';
+
   if(!image){
 
     if (count_words(product_name.split()) > 1){
@@ -36,8 +38,6 @@ function ProductCard({ data, product_name, description, units, price, id, image 
 
   const { addItem } = useCart();
   return (
-
-  
           <div className="grid">
     <div className="card-container ">
           <div className="wrapper">
@@ -54,7 +54,7 @@ function ProductCard({ data, product_name, description, units, price, id, image 
               </div> */}
               <img src={image} />
               <div className="info">
-                <div className="title">{product_name}</div>
+                <div className="title">{product_name} {price}€/{units}</div>
                 <p>{description}</p>
               </div>
               <Link className="card-link" to={`/api/product/find/${id}`}>
@@ -62,10 +62,13 @@ function ProductCard({ data, product_name, description, units, price, id, image 
               </Link>
               <button
             className="btn btn-success"
-            onClick={() =>             
-              addItem({ id: id, product_name, description, price, pic })} >
+            onClick={() =>   //console.log('hello')          
+               addItem({ id: id, product_name, description, price, image })
+            } >
               Add to cart
+              
               </button>
+
             </div>
           </div>
         </div>

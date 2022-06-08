@@ -6,12 +6,16 @@ function Navbar() {
   const { totalItems } = useCart();
   return (
 
-    <div className="navContainer">
-      
-      <div className="logoContainer"></div>
-      
-      <nav className="navPanel">
-        <ul>
+    <div>
+      <nav>
+        <div className="nav-content">
+          <div className="logo">
+            <a href="#" className="nav-a">
+              F4rm3r
+            </a>
+          </div>
+          <ul className="nav-links">
+  
           <li>
             <Link to="/"> Home </Link>
           </li>
@@ -24,11 +28,15 @@ function Navbar() {
           <li>
             <Link to="/login"> Log in </Link>
           </li>
-          {/* <a href="/"> Sign out </a> */}
-        </ul>
+ 
+          </ul>
+        </div>
       </nav>
     </div>
   );
 }
 
 export default Navbar;
+
+/*
+    */

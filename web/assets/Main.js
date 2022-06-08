@@ -9,7 +9,7 @@ import SingleProduct from "../assets/pages/SingleProduct";
 import Profile from "../assets/pages/Profile";
 import Cart from "../assets/pages/Cart";
 import CheckOut from "../assets/pages/CheckOut";
-import Footer from "../assets/components/ui_components/Footer";
+//import Footer from "../assets/components/ui_components/Footer";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import { CartProvider } from "react-use-cart";
@@ -24,7 +24,6 @@ function Main() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            {/*<Route path="/:productId" element={<SingleProduct />}></Route>*/}
             <Route path="/api/product/find/:id" element={<SingleProduct />} />
             <Route path="/profile" element={<Profile />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
@@ -34,7 +33,7 @@ function Main() {
           </Routes>
         </Router>
       </CartProvider>
-      <Footer />
+      
     </>
   );
 }

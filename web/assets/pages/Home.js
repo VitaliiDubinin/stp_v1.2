@@ -41,17 +41,25 @@ function Home() {
 
   return (
     <div>
-      <div className="search">
+        
+
+        <form className="container-search">
+          <input
+            type="text"
+            name="search"
+            placeholder=" 🔍 Search.."
+            className="search"
+            onChange={searchHandler}
+          />
+        </form>
+      {/* <div className="search">
         <input type="text" placeholder="🔍" onChange={searchHandler} />
-      </div>
+      </div> */}
 
       <div className="browser">
         {productFilter.map((product) => (
-          <ProductCard key={product.id} data={product} {...product} />
-          // <ProdCart key={product.id} data={product} {...product} />
+          <ProductCard key={product.id} data={product} {...product} />         
         ))}
-
-        {/* <Link to="/cart"> Cart:{totalItems}</Link> */}
       </div>
     </div>
   );
