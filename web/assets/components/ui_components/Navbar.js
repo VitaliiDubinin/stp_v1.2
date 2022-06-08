@@ -2,16 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useCart } from "react-use-cart";
 
-// import css from './navbar.module.css';
-
 function Navbar() {
   const { totalItems } = useCart();
   return (
-    // <div className={css.navContainer}>
+
     <div className="navContainer">
-      {/* <div className={css.logoContainer}></div> */}
+      
       <div className="logoContainer"></div>
-      {/* <nav className={css.navPanel}> */}
+      
       <nav className="navPanel">
         <ul>
           <li>

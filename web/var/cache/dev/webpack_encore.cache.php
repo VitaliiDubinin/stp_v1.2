@@ -16,6 +16,9 @@ return [[
                 '/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_axios_index_js-node_m-dbf9a6.js',
                 '/build/app.js',
             ],
+            'css' => [
+                '/build/app.css',
+            ],
         ],
     ],
 ],
