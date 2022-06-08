@@ -36,49 +36,42 @@ function ProductCard({ data, product_name, description, units, price, id, image 
 
   const { addItem } = useCart();
   return (
-    <div className="productCard">
-      <div className="productImage">
-        <img src={image} width="50" height="60" />
-      </div>
-      <div className="productBodyContainer">
-        <h3 className="productName"> {product_name} </h3>
-        <div className="shortDescription">
-          {description}. <br />
-        </div>
-        <div className="cardFooter">
-          <Link to={`/api/product/find/${data.id}`} state={{ data: data }}>
-            See more
-          </Link>
 
-          {/* <button type="submit" className="addToCartBtn">
-            {" "}
-            add{" "}
-          </button> */}
-
-          <button
+  
+          <div className="grid">
+    <div className="card-container ">
+          <div className="wrapper">
+            <div className="card front-face">
+              <img src={image} />
+            </div>
+            <div className="card back-face">
+              <div className="remove">
+                element
+              </div>
+              {/* <div className="remove" onClick={() => removeRecipe(recipe.id)}>
+                
+                {element}
+              </div> */}
+              <img src={image} />
+              <div className="info">
+                <div className="title">{product_name}</div>
+                <p>{description}</p>
+              </div>
+              <Link className="card-link" to={`/api/product/find/${id}`}>
+                See more
+              </Link>
+              <button
             className="btn btn-success"
-            onClick={() =>
-              // console.log(id, product_name, description, price, pic)}>
-              addItem({ id: id, product_name, description, price, pic })
-            }
-          >
-            Add to cart
-          </button>
-
-          <div className="productPrice">
-            {price}€/{units}
+            onClick={() =>             
+              addItem({ id: id, product_name, description, price, pic })} >
+              Add to cart
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   );
 }
 
 export default ProductCard;
 
-//productName
-//description
-//totalAmount
-//units
-//image
-//id
