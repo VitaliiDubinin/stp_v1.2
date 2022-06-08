@@ -14,6 +14,8 @@ git clone https://github.com/VitaliiDubinin/STP_Kernel.git
 docker-compose up --build
 cd web
 npm install
+npm install react-use-cart
+npm i bootstrap
 npm run watch
 ```
 

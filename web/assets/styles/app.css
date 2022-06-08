@@ -331,3 +331,15 @@ input {
 .overlay-right {
   right: 0;
 }
+
+.productCard {
+  width: 200px;
+  height: 250px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: blue;
+}

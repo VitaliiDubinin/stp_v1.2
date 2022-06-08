@@ -12,23 +12,30 @@ import CheckOut from "../assets/pages/CheckOut";
 import Footer from "../assets/components/ui_components/Footer";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
+import { CartProvider } from "react-use-cart";
+
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function Main() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        {/*<Route path="/:productId" element={<SingleProduct />}></Route>*/}
-        <Route path="/api/product/find/:id" element={<SingleProduct />} />
-        <Route path="/profile" element={<Profile />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>
-        <Route path="/cart/checkout" element={<CheckOut />}></Route>
-        <Route path="/login" element={<LogIn />}></Route>
-        <Route path="/login/signup" element={<SignUp />}></Route>
-      </Routes>
+    <>
+      <CartProvider>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            {/*<Route path="/:productId" element={<SingleProduct />}></Route>*/}
+            <Route path="/api/product/find/:id" element={<SingleProduct />} />
+            <Route path="/profile" element={<Profile />}></Route>
+            <Route path="/cart" element={<Cart />}></Route>
+            <Route path="/cart/checkout" element={<CheckOut />}></Route>
+            <Route path="/loginN" element={<LogIn />}></Route>
+            <Route path="/loginN/signup" element={<SignUp />}></Route>
+          </Routes>
+        </Router>
+      </CartProvider>
       <Footer />
-    </Router>
+    </>
   );
 }
 

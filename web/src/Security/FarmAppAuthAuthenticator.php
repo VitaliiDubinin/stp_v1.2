@@ -52,9 +52,10 @@ class FarmAppAuthAuthenticator extends AbstractLoginFormAuthenticator
         // For example:
         // return new RedirectResponse($this->urlGenerator->generate('some_route'));
         // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
-        return new RedirectResponse($this->urlGenerator->generate("api_mainget_all_products"));
+        // return new RedirectResponse($this->urlGenerator->generate("api_mainget_all_products"));
+        return new RedirectResponse($this->urlGenerator->generate("app_home"));
         // return new RedirectResponse($this->urlGenerator->generate("app_login"));
-        // return new RedirectResponse($this->urlGenerator->generate({reactRouting}));
+ 
     }
 
     protected function getLoginUrl(Request $request): string
