@@ -17,6 +17,9 @@ npm install
 npm install react-use-cart
 npm i bootstrap
 npm run watch
+npm i firebase
+composer require kreait/firebase-php
+composer require symfony/notifier
 ```
 
 - phpMyAdmin will run on [http://localhost:9582]
