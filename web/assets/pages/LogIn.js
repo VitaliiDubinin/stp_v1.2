@@ -95,9 +95,28 @@ function Login() {
       )}
 
       {user?.email && (
+        // <div>
+        //   <h4> User Logged In: </h4>
+        //   <button onClick={logout}> Sign Out </button>
+        // </div>
+
         <div>
-          <h4> User Logged In: </h4>
-          <button onClick={logout}> Sign Out </button>
+          <h3> Login </h3>
+
+          <input
+            placeholder="Email..."
+            onChange={(event) => {
+              setLoginEmail(event.target.value);
+            }}
+          />
+          <input
+            placeholder="Password..."
+            onChange={(event) => {
+              setLoginPassword(event.target.value);
+            }}
+          />
+
+          <button onClick={login}> Login</button>
         </div>
       )}
     </div>

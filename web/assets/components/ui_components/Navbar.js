@@ -10,7 +10,7 @@ function Navbar() {
         <div className="nav-content">
           <div className="logo">
             <a href="#" className="nav-a">
-              F4rm3r
+              KernelTeam Summer Project
             </a>
           </div>
           <ul className="nav-links">
