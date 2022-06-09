@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 // import "../bootstrap";
 // import "../Main";
-import LogIn from "./LogIn";
+import LoginFirst from "./LoginFirst";
 import LoginTwig from "./LoginTwig";
 
 // function LoginFunct() {

@@ -1305,6 +1305,14 @@
         <argument>-1000</argument>
       </call>
       <call method="addListener">
+        <argument>Symfony\Component\Notifier\Event\MessageEvent</argument>
+        <argument type="collection">
+          <argument type="service_closure" id="notifier.logger_notification_listener"/>
+          <argument>onNotification</argument>
+        </argument>
+        <argument>-255</argument>
+      </call>
+      <call method="addListener">
         <argument>console.error</argument>
         <argument type="collection">
           <argument type="service_closure" id="maker.console_error_listener"/>
@@ -1722,6 +1730,97 @@
     </service>
     <service id="twig.extension.security_csrf" class="Symfony\Bridge\Twig\Extension\CsrfExtension">
       <tag name="twig.extension"/>
+    </service>
+    <service id="notifier" class="Symfony\Component\Notifier\Notifier">
+      <argument type="service" id=".service_locator.re09Nvj"/>
+      <argument type="service" id="notifier.channel_policy" on-invalid="ignore"/>
+      <call method="addAdminRecipient">
+        <argument type="service" id="notifier.admin_recipient.0"/>
+      </call>
+    </service>
+    <service id="notifier.channel_policy" class="Symfony\Component\Notifier\Channel\ChannelPolicy">
+      <argument type="collection">
+        <argument key="urgent" type="collection">
+          <argument>email</argument>
+        </argument>
+        <argument key="high" type="collection">
+          <argument>email</argument>
+        </argument>
+        <argument key="medium" type="collection">
+          <argument>email</argument>
+        </argument>
+        <argument key="low" type="collection">
+          <argument>email</argument>
+        </argument>
+      </argument>
+    </service>
+    <service id="notifier.channel.browser" class="Symfony\Component\Notifier\Channel\BrowserChannel">
+      <tag name="notifier.channel" channel="browser"/>
+      <argument type="service" id="request_stack"/>
+    </service>
+    <service id="notifier.channel.chat" class="Symfony\Component\Notifier\Channel\ChatChannel">
+      <tag name="notifier.channel" channel="chat"/>
+      <argument type="service" id="chatter.transports"/>
+      <argument>null</argument>
+    </service>
+    <service id="notifier.channel.sms" class="Symfony\Component\Notifier\Channel\SmsChannel">
+      <tag name="notifier.channel" channel="sms"/>
+      <argument type="service" id="texter.transports"/>
+      <argument>null</argument>
+    </service>
+    <service id="notifier.channel.push" class="Symfony\Component\Notifier\Channel\PushChannel">
+      <tag name="notifier.channel" channel="push"/>
+      <argument type="service" id="texter.transports"/>
+      <argument>null</argument>
+    </service>
+    <service id="notifier.monolog_handler" class="Symfony\Bridge\Monolog\Handler\NotifierHandler">
+      <argument type="service" id="notifier"/>
+    </service>
+    <service id="notifier.failed_message_listener" class="Symfony\Component\Notifier\EventListener\SendFailedMessageToNotifierListener">
+      <argument type="service" id="notifier"/>
+    </service>
+    <service id="chatter.transports" class="Symfony\Component\Notifier\Transport\Transports">
+      <argument type="collection"/>
+      <factory service="chatter.transport_factory" method="fromStrings"/>
+    </service>
+    <service id="chatter.transport_factory" class="Symfony\Component\Notifier\Transport">
+      <argument type="tagged_iterator" tag="chatter.transport_factory"/>
+    </service>
+    <service id="chatter.messenger.chat_handler" class="Symfony\Component\Notifier\Messenger\MessageHandler">
+      <tag name="messenger.message_handler" handles="Symfony\Component\Notifier\Message\ChatMessage"/>
+      <argument type="service" id="chatter.transports"/>
+    </service>
+    <service id="texter.transports" class="Symfony\Component\Notifier\Transport\Transports">
+      <argument type="collection"/>
+      <factory service="texter.transport_factory" method="fromStrings"/>
+    </service>
+    <service id="texter.transport_factory" class="Symfony\Component\Notifier\Transport">
+      <argument type="tagged_iterator" tag="texter.transport_factory"/>
+    </service>
+    <service id="texter.messenger.sms_handler" class="Symfony\Component\Notifier\Messenger\MessageHandler">
+      <tag name="messenger.message_handler" handles="Symfony\Component\Notifier\Message\SmsMessage"/>
+      <argument type="service" id="texter.transports"/>
+    </service>
+    <service id="texter.messenger.push_handler" class="Symfony\Component\Notifier\Messenger\MessageHandler">
+      <tag name="messenger.message_handler" handles="Symfony\Component\Notifier\Message\PushMessage"/>
+      <argument type="service" id="texter.transports"/>
+    </service>
+    <service id="notifier.logger_notification_listener" class="Symfony\Component\Notifier\EventListener\NotificationLoggerListener">
+      <tag name="kernel.event_subscriber"/>
+    </service>
+    <service id="notifier.transport_factory.abstract" class="Symfony\Component\Notifier\Transport\AbstractTransportFactory" abstract="true">
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument type="service" id="http_client" on-invalid="ignore"/>
+    </service>
+    <service id="notifier.transport_factory.null" class="Symfony\Component\Notifier\Transport\NullTransportFactory">
+      <tag name="chatter.transport_factory"/>
+      <tag name="texter.transport_factory"/>
+      <argument type="service" id="debug.event_dispatcher"/>
+      <argument>null</argument>
+    </service>
+    <service id="notifier.admin_recipient.0" class="Symfony\Component\Notifier\Recipient\Recipient">
+      <argument>admin@example.com</argument>
+      <argument></argument>
     </service>
     <service id="doctrine.dbal.logger.chain" class="Doctrine\DBAL\Logging\LoggerChain">
       <argument type="collection">
@@ -4041,6 +4140,15 @@
         <argument key="session_factory" type="service_closure" id="session.factory" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.re09Nvj" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="browser" type="service_closure" id="notifier.channel.browser"/>
+        <argument key="chat" type="service_closure" id="notifier.channel.chat"/>
+        <argument key="push" type="service_closure" id="notifier.channel.push"/>
+        <argument key="sms" type="service_closure" id="notifier.channel.sms"/>
+      </argument>
+    </service>
     <service id=".service_locator.LcVn9Hr" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4702,6 +4810,9 @@
     <service id="Symfony\Component\Security\Csrf\TokenGenerator\TokenGeneratorInterface" alias="security.csrf.token_generator"/>
     <service id="Symfony\Component\Security\Csrf\TokenStorage\TokenStorageInterface" alias="security.csrf.token_storage"/>
     <service id="Symfony\Component\Security\Csrf\CsrfTokenManagerInterface" alias="security.csrf.token_manager"/>
+    <service id="Symfony\Component\Notifier\NotifierInterface" alias="notifier"/>
+    <service id="Symfony\Component\Notifier\ChatterInterface" alias="chatter"/>
+    <service id="Symfony\Component\Notifier\TexterInterface" alias="texter"/>
     <service id="Doctrine\DBAL\Driver\Connection" alias="doctrine.dbal.default_connection"/>
     <service id="Doctrine\DBAL\Connection" alias="doctrine.dbal.default_connection"/>
     <service id="Doctrine\Persistence\ManagerRegistry" alias="doctrine"/>
@@ -4777,6 +4888,7 @@
     <service id=".service_locator.kXCVHeG" alias=".service_locator.UDgw6Ol"/>
     <service id=".service_locator.LJ94tHc" alias=".service_locator.l1ae.Qz"/>
     <service id=".service_locator.u6DWx23" alias=".service_locator.cXsfP3P"/>
+    <service id=".service_locator.oVpjIIu" alias=".service_locator.re09Nvj"/>
     <service id=".service_locator.aa1PbBb" alias=".service_locator.nLgZj7R"/>
   </services>
 </container>

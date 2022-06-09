@@ -48,7 +48,7 @@ const Cart = () => {
                   <tr key={item.id}>
                     <td>
                       {" "}
-                      <img src={item.pic} alt={item.product_name} style={{ height: "6rem" }} /> {item.product_name}
+                      <img src={item.image} alt={item.product_name} style={{ height: "6rem" }} /> {item.product_name}
                     </td>
                     <td>${item.price}</td>
                     <td>
@@ -78,7 +78,7 @@ const Cart = () => {
               <Link to="/cart/checkout" totalam={totalam}>
                 {/* Checkout {cartTotal} */}
                 {/* Checkout {totalam} */}
-                Checkout {totalam}
+                Checkout
               </Link>
             </button>
           </div>

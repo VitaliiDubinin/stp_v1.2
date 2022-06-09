@@ -13,7 +13,7 @@ return [
     'api_mainfind_a_recipe' => [['id'], ['_controller' => 'App\\Controller\\ReceipeController::findRecipe'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/api/recipes/find']], [], [], []],
     'api_mainedit_a_recipe' => [['id'], ['_controller' => 'App\\Controller\\ReceipeController::editRecipe'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/api/recipes/edit']], [], [], []],
     'api_mainremove_a_recipe' => [['id'], ['_controller' => 'App\\Controller\\ReceipeController::removeRecipe'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/api/recipes/remove']], [], [], []],
-    'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
-    'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
+    'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/loginv']], [], [], []],
+    'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logoutv']], [], [], []],
     'app_home' => [['reactRouting'], ['reactRouting' => null, '_controller' => 'App\\Controller\\SpaController::index'], ['reactRouting' => '(?!api).+'], [['variable', '/', '(?!api).+', 'reactRouting', true]], [], [], []],
 ];

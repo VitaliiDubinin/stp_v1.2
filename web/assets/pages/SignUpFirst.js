@@ -1,6 +1,6 @@
 import React from "react";
 
-function SignUp() {
+function SignUpFirst() {
   return (
     <body>
       <div class="container" id="container">
@@ -30,10 +30,7 @@ function SignUp() {
           <div class="overlay">
             <div class="overlay-panel overlay-right">
               <h2>New Farmer signup from here</h2>
-              <p>
-                So we can put some instruction for the farmer something here
-                somthing here.
-              </p>
+              <p>So we can put some instruction for the farmer something here somthing here.</p>
             </div>
           </div>
         </div>
@@ -42,4 +39,4 @@ function SignUp() {
   );
 }
 
-export default SignUp;
+export default SignUpFirst;

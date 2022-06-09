@@ -10,8 +10,8 @@ import Profile from "../assets/pages/Profile";
 import Cart from "../assets/pages/Cart";
 import CheckOut from "../assets/pages/CheckOut";
 //import Footer from "../assets/components/ui_components/Footer";
-import LogIn from "./pages/LogIn";
-import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUpFirst";
 import { CartProvider } from "react-use-cart";
 
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -25,16 +25,16 @@ function Main() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/api/product/find/:id" element={<SingleProduct />} />
+            {/* <Route path="/api/product/find/:id" element={<SingleProduct />} /> */}
             <Route path="/profile" element={<Profile />}></Route>
+            <Route path="products/:id" element={<SingleProduct />}></Route>
             <Route path="/cart" element={<Cart />}></Route>
             <Route path="/cart/checkout" element={<CheckOut />}></Route>
-            <Route path="/loginN" element={<LogIn />}></Route>
+            <Route path="/login" element={<Login />}></Route>
             <Route path="/loginN/signup" element={<SignUp />}></Route>
           </Routes>
         </Router>
       </CartProvider>
-      
     </>
   );
 }
