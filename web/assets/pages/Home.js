@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Navbar from "../components/ui_components/Navbar";
+
 import { useCart } from "react-use-cart";
-import { Link } from "react-router-dom";
+
 import ProductCard from "../components/ui_components/ProductCard";
 import "../styles/app.css";
-import ProdCart from "../components/ui_components/ProdCart";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -41,24 +40,13 @@ function Home() {
 
   return (
     <div>
-        
-
-        <form className="container-search">
-          <input
-            type="text"
-            name="search"
-            placeholder=" 🔍 Search.."
-            className="search"
-            onChange={searchHandler}
-          />
-        </form>
-      {/* <div className="search">
-        <input type="text" placeholder="🔍" onChange={searchHandler} />
-      </div> */}
+      <form className="container-search">
+        <input type="text" name="search" placeholder=" 🔍 Search.." className="search" onChange={searchHandler} />
+      </form>
 
       <div className="browser">
         {productFilter.map((product) => (
-          <ProductCard key={product.id} data={product} {...product} />         
+          <ProductCard key={product.id} data={product} {...product} />
         ))}
       </div>
     </div>

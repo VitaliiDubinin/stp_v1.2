@@ -12,7 +12,7 @@ const SingleProduct = () => {
   const { addItem } = useCart();
   return (
     <div className="col-10 mx-auto m-4">
-      <div className="card p-0 overflow-hidden h-100 shadow">
+      <div className="cart p-0 overflow-hidden h-100 shadow">
         <div className="card-body text-center">
           <img
             src={product.image}

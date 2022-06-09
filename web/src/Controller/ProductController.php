@@ -33,25 +33,7 @@ class ProductController extends AbstractController
         return $this->json($response);
     }
 
-    // #[Route('/recipes/add', name: "add_new_recipe", methods: ['POST'])]
-    // public function addRecipe(Request $request, ManagerRegistry $doctrine)
-    // {
-    //     $em = $doctrine->getManager();
-    //     $data = json_decode($request->getContent(), true);
 
-    //     $newRecipe = new Recipe();
-
-    //     $newRecipe->setName($data["name"]);
-    //     $newRecipe->setPhoto($request->request->get("photo"));
-    //     $newRecipe->setInstructions($data["instructions"]);
-    //     $newRecipe->setDifficulty($data["difficulty"]);
-    //     $newRecipe->setIngredients($data["ingredients"]);
-
-    //     $em->persist($newRecipe);
-    //     $em->flush();
-
-    //     return new Response('Added a new recipe ' . $newRecipe->getId());
-    // }
 
     #[Route('/products/find/{id}', name: "find_a_product", methods: ['GET'])]
     public function findProduct(int $id, EntityManagerInterface $em)
@@ -75,42 +57,5 @@ class ProductController extends AbstractController
         return $this->json($data);
     }
 
-    // #[Route('/recipes/edit/{id}', name: "edit_a_recipe", methods: ['PUT', 'PATCH'])]
-    // public function editRecipe(Request $request, int $id, ManagerRegistry $doctrine)
-    // {
-    //     $entityManager = $doctrine->getManager();
-    //     $recipe = $entityManager->getRepository(Recipe::class)->find($id);
-
-    //     if (!$recipe) {
-    //         return $this->json('No recipe was found with the id of ' . $id, 404);
-    //     }
-
-    //     $recipe->setName($request->request->get('name'));
-    //     $entityManager->flush();
-
-    //     $data =  [
-    //         'id' => $recipe->getId(),
-    //         'name' => $recipe->getName(),
-    //     ];
-
-    //     return $this->json($data);
-    // }
-    // #[Route('/recipes/remove/{id}', name: "remove_a_recipe", methods: ['DELETE'])]
-    // public function removeRecipe($id, ManagerRegistry $doctrine)
-    // {
-    //     $recipe = $doctrine->getRepository(Recipe::class)->find($id);
-    //     $entityManager = $doctrine->getManager();
-
-    //     if (!$recipe) {
-    //         throw $this->createNotFoundException(
-    //             'No recipe was found with the id of ' . $id
-    //         );
-    //     } else {
-    //         $entityManager->remove($recipe);
-    //         $entityManager->flush();
-    //         return $this->json([
-    //             'message' => 'Removed the recipe with the id of ' . $id
-    //         ]);
-    //     }
-    // }
+ 
 }

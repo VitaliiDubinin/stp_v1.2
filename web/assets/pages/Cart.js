@@ -23,7 +23,7 @@ const Cart = () => {
   const totalam = cartTotal;
   // console.log(totalam);
   return (
-    <section className="py-4 container">
+    <section className="cart py-4 container">
       <div className="row justify-content-center">
         <div className="col-12">
           <h1>Cart</h1>
