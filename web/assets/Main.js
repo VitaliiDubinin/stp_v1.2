@@ -19,6 +19,7 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 function Main() {
   return (
     <>
+      {/* <Navbar /> */}
       <CartProvider>
         <Router>
           <Navbar />
@@ -44,6 +45,6 @@ export default Main;
 const root = ReactDOM.createRoot(document.getElementById("app"));
 root.render(
   <React.StrictMode>
-    <Main />,
+    <Main />
   </React.StrictMode>
 );

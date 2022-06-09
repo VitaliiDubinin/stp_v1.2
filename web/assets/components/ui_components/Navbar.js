@@ -24,6 +24,7 @@ function Navbar() {
             <Link to="/cart">Cart: {totalItems} </Link>
           </li>
           <li>
+            {/* <Link to="/login"> Log in </Link> */}
             <Link to="/login"> Log in </Link>
           </li>
           {/* <a href="/"> Sign out </a> */}

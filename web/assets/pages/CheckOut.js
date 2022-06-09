@@ -1,7 +1,10 @@
 import React from "react";
+import { useCart } from "react-use-cart";
 
-function CheckOut({ totalam }) {
-  console.log(totalam);
+// function CheckOut({ totalam }) {
+function CheckOut() {
+  const { cartTotal } = useCart();
+
   return (
     <>
       <h1>CheckOut</h1>
@@ -9,7 +12,7 @@ function CheckOut({ totalam }) {
         <div className="form-group">
           <label>Total Amount</label>
 
-          <input type="number" className="form-control" placeholder={totalam} />
+          <input type="number" className="form-control" placeholder={cartTotal} />
         </div>
         <div className="form-group">
           <label>Payment Method</label>

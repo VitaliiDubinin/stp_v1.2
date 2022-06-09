@@ -15,9 +15,9 @@ function LogIn() {
             <button>Log In</button>
           </form>
         </div>
-        <div class="overlay-container">
-          <div class="overlay">
-            <div class="overlay-panel overlay-right">
+        <div className="overlay-container">
+          <div className="overlay">
+            <div className="overlay-panel overlay-right">
               <h1>Farmer login from here</h1>
               <p>So we can put some instruction for the farmer bls bla bla . . .</p>
             </div>
