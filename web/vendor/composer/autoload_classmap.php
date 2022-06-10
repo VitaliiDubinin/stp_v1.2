@@ -6,15 +6,11 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'App\\Controller\\DbApi_Controller' => $baseDir . '/src/Controller/DbApi_Controller.php',
-    'App\\Controller\\Product2Controller' => $baseDir . '/src/Controller/Product2Controller.php',
     'App\\Controller\\ProductController' => $baseDir . '/src/Controller/ProductController.php',
-    'App\\Controller\\ReceipeController' => $baseDir . '/src/Controller/ReceipeController.php',
     'App\\Controller\\SecurityController' => $baseDir . '/src/Controller/SecurityController.php',
     'App\\Controller\\SpaController' => $baseDir . '/src/Controller/SpaController.php',
     'App\\Entity\\LoginUser' => $baseDir . '/src/Entity/LoginUser.php',
     'App\\Entity\\Product' => $baseDir . '/src/Entity/Product.php',
-    'App\\Entity\\Recipe' => $baseDir . '/src/Entity/Recipe.php',
     'App\\Entity\\StpUser' => $baseDir . '/src/Entity/StpUser.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'App\\Repository\\LoginUserRepository' => $baseDir . '/src/Repository/LoginUserRepository.php',

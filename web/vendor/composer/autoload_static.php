@@ -359,8 +359,8 @@ class ComposerStaticInitaf31b9d9c4ee48900259ee2fa756301a
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -527,15 +527,11 @@ class ComposerStaticInitaf31b9d9c4ee48900259ee2fa756301a
     );
 
     public static $classMap = array (
-        'App\\Controller\\DbApi_Controller' => __DIR__ . '/../..' . '/src/Controller/DbApi_Controller.php',
-        'App\\Controller\\Product2Controller' => __DIR__ . '/../..' . '/src/Controller/Product2Controller.php',
         'App\\Controller\\ProductController' => __DIR__ . '/../..' . '/src/Controller/ProductController.php',
-        'App\\Controller\\ReceipeController' => __DIR__ . '/../..' . '/src/Controller/ReceipeController.php',
         'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
         'App\\Controller\\SpaController' => __DIR__ . '/../..' . '/src/Controller/SpaController.php',
         'App\\Entity\\LoginUser' => __DIR__ . '/../..' . '/src/Entity/LoginUser.php',
         'App\\Entity\\Product' => __DIR__ . '/../..' . '/src/Entity/Product.php',
-        'App\\Entity\\Recipe' => __DIR__ . '/../..' . '/src/Entity/Recipe.php',
         'App\\Entity\\StpUser' => __DIR__ . '/../..' . '/src/Entity/StpUser.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\LoginUserRepository' => __DIR__ . '/../..' . '/src/Repository/LoginUserRepository.php',

@@ -16,21 +16,31 @@ cd web
 npm install
 npm install react-use-cart
 npm i bootstrap
-npm run watch
-npm i firebase
-composer require kreait/firebase-php
-composer require symfony/notifier
 ```
 
 - phpMyAdmin will run on [http://localhost:9582]
 - npm watch will run on [http://localhost:8507]
 
-go to your docker dasboard,
-enter in cli of phpMyAdmin:
+- go to your docker dasboard,
+  enter in cli of phpMyAdmin:
 
 ```shell
 cd web
 php bin/console doctrine:migrations:migrate
+```
+
+- get back to Ide terminal:
+
+```shell
+npm run watch
+```
+
+if some of this features are not working, need reinstalling:
+
+```shell
+npm i firebase
+composer require kreait/firebase-php
+composer require symfony/notifier
 ```
 
 # Use for reference

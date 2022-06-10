@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '8454c2e17a40a6cfe51b8eda224b9cb83e87f17c',
+        'reference' => 'c8b1a4e26c67e5a31146371ce97b16dd07a87af7',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '8454c2e17a40a6cfe51b8eda224b9cb83e87f17c',
+            'reference' => 'c8b1a4e26c67e5a31146371ce97b16dd07a87af7',
             'dev_requirement' => false,
         ),
         'beste/clock' => array(
@@ -457,8 +457,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0.0 || 2.0.0 || 3.0.0',
-                1 => '1.0|2.0|3.0',
+                0 => '1.0|2.0|3.0',
+                1 => '1.0.0 || 2.0.0 || 3.0.0',
             ),
         ),
         'psr/simple-cache-implementation' => array(
